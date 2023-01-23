@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #content {
+      font-size: 18px;
+      color: black;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <h1>Welcome to my website</h1>
+    <p>This is the content of my website</p>
+  </div>
+  <button onclick="readContent()">Read content</button>
+  <script>
+    function readContent() {
+      var content = document.getElementById('content').innerHTML;
+      var speech = new SpeechSynthesisUtterance(content);
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html>
